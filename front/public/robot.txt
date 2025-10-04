@@ -1,0 +1,48 @@
+# robots.txt para Eclothe - Tienda de Moda Sostenible
+
+# Permitir acceso a todos los bots de búsqueda
+User-agent: *
+Allow: /
+
+# Bloquear archivos y carpetas que no deben indexarse
+Disallow: /admin/
+Disallow: /api/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /login/
+Disallow: /register/
+Disallow: /profile/
+Disallow: /orders/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+
+# Permitir específicamente archivos importantes
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /*.css
+Allow: /*.js
+
+# Optimizaciones para bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot  
+Allow: /
+
+# Bloquear bots maliciosos conocidos
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Delay para evitar sobrecarga del servidor
+Crawl-delay: 1
+
+# Ubicación del sitemap
+Sitemap: https://eclothe.com/sitemap.xml

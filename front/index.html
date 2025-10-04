@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon personalizado -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Meta tags esenciales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Eclothe - Moda sostenible y consciente. Descubre nuestra colección de ropa eco-friendly hecha con materiales reciclados y procesos responsables."
+    />
+    <meta
+      name="keywords"
+      content="moda sostenible, ropa ecológica, fashion eco-friendly, ropa reciclada, moda consciente, eclothe"
+    />
+    <meta name="author" content="Eclothe" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eclothe.com/" />
+    <meta
+      property="og:title"
+      content="Eclothe - Moda Sostenible y Consciente"
+    />
+    <meta
+      property="og:description"
+      content="Descubre nuestra colección de ropa eco-friendly hecha con materiales reciclados y procesos responsables."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:site_name" content="Eclothe" />
+    <meta property="og:locale" content="es_MX" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://eclothe.com/" />
+    <meta
+      name="twitter:title"
+      content="Eclothe - Moda Sostenible y Consciente"
+    />
+    <meta
+      name="twitter:description"
+      content="Descubre nuestra colección de ropa eco-friendly hecha con materiales reciclados y procesos responsables."
+    />
+    <meta name="twitter:image" content="/twitter-image.jpg" />
+
+    <!-- Preconexiones para mejor rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fuentes de Google (opcional) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tema y colores -->
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="msapplication-TileColor" content="#16a34a" />
+
+    <!-- PWA (Aplicación Web Progresiva) -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "Eclothe",
+        "description": "Moda sostenible y consciente",
+        "url": "https://eclothe.com",
+        "logo": "https://eclothe.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/eclothe",
+          "https://www.instagram.com/eclothe",
+          "https://twitter.com/eclothe"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tonalá",
+          "addressRegion": "Jalisco",
+          "addressCountry": "MX"
+        }
+      }
+    </script>
+
+    <title>Eclothe - Moda Sostenible y Consciente</title>
+  </head>
+  <body>
+    <!-- Mensaje para navegadores sin JavaScript -->
+    <noscript>
+      <div
+        style="
+          text-align: center;
+          padding: 20px;
+          background: #fef3c7;
+          color: #92400e;
+        "
+      >
+        Tu navegador no tiene JavaScript habilitado. Por favor, habilítalo para
+        una mejor experiencia.
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
