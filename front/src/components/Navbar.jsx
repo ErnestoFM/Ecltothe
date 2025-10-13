@@ -32,7 +32,7 @@ const Navbar = () => {
     { name: 'Accesorios', to: '/' },
     { name: 'Contacto', to: '/contact' },
     { name: 'Ofertas', to: '/' },
-    { name: 'Sostenibilidad', to: '/' }
+    { name: 'Nosotros', to: '/nosotros' }
   ];
 
   return (
