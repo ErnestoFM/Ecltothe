@@ -29,9 +29,7 @@ const Navbar = () => {
     { name: 'Inicio', to: '/' },
     { name: 'Productos', to: '/productos' },
     { name: 'Blog', to: '/blog' },
-    { name: 'Accesorios', to: '/' },
     { name: 'Contacto', to: '/contact' },
-    { name: 'Ofertas', to: '/' },
     { name: 'Nosotros', to: '/nosotros' }
   ];
 
@@ -134,7 +132,7 @@ const Navbar = () => {
                           Mi perfil
                         </Link>
                         <Link
-                          to="/mis-pedidos"
+                          to="/pedidos"
                           onClick={closeUserMenu}
                           className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors duration-200"
                         >

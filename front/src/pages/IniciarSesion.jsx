@@ -29,6 +29,12 @@ const IniciarSesion = () => {
     navigate('/');
   };
 
+  const handleFacebookLogin = () => {
+    // Simulación de login con Facebook
+    login({ name: 'Ernesto con Facebook', email: 'ernesto@facebook.com' });
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white p-6 sm:p-8 rounded-xl shadow-md">
@@ -81,11 +87,10 @@ const IniciarSesion = () => {
             <div className="flex-grow h-px bg-gray-300"></div>
         </div>
 
-
-        {/* Botón Google */}
+        {/* Botones de inicio de sesión con redes sociales */}
         <button
           onClick={handleGoogleLogin}
-          className="w-full flex items-center justify-center border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+          className="w-full flex items-center justify-center border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 mb-4"
         >
           <img
             src="google-icon.png"
@@ -93,6 +98,21 @@ const IniciarSesion = () => {
             className="h-5 w-5 mr-3"
           />
           <span className="text-sm text-gray-700 font-medium">Continuar con Google</span>
+        </button>
+
+        <button
+          onClick={handleFacebookLogin}
+          className="w-full flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="h-5 w-5 mr-3"
+          >
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.727 4.147 10.481 9.542 11.521v-7.875h-2.542v-2.875h2.542v-2.375c0-2.516 1.542-3.875 3.792-3.875 1.083 0 2.542.208 2.542.208v2.708h-1.375c-1.375 0-1.667 1-1.667 2v1.708h2.792l-.417 2.875h-2.375v7.875c5.395-1.04 9.542-5.794 9.542-11.521z" />
+          </svg>
+          <span className="text-sm font-medium">Continuar con Facebook</span>
         </button>
 
         <p className="mt-6 text-sm text-center text-gray-600">

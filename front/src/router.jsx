@@ -10,6 +10,7 @@ import Productos from './pages/Productos';
 import ProductoDetalle from './pages/ProductoDetalle';
 import PrivacyPage from './pages/PrivacyPolicy';
 import TermsPage from './pages/TermsConditions';
+import Pedidos from './pages/Pedidos';
 
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/privacidad" element={<PrivacyPage />} />
       <Route path="/terminos" element={<TermsPage />} />
       <Route path="/productos" element={<Productos />} />
+      <Route path="/pedidos" element={<Pedidos />} />
       <Route path="/producto/:id" element={<ProductoDetalle />} />
     </Routes>
   );
