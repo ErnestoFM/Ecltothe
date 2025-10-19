@@ -6,7 +6,7 @@ const ReviewsSection = () => {
   const [filterRating, setFilterRating] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
 
-  // Base de datos de reseñas
+  // Base de  datos de reseñas
   const allReviews = [
     {
       id: 1,

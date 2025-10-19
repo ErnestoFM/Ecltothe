@@ -267,21 +267,35 @@ export default function Contact() {
                   </div>
 
                   {/* FAQ rápido */}
-                  <div className="bg-green-50 rounded-2xl p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      💡 Preguntas frecuentes
-                    </h3>
-                    <div className="space-y-3 text-sm">
-                      <div>
-                        <p className="font-semibold text-gray-900">¿Cómo puedo rastrear mi pedido?</p>
-                        <p className="text-gray-600">Te enviaremos un email con el código de seguimiento.</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">¿Hacen envíos internacionales?</p>
-                        <p className="text-gray-600">Actualmente solo enviamos dentro de México.</p>
-                      </div>
+                <div className="bg-green-50 rounded-2xl p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    💡 Preguntas frecuentes
+                  </h3>
+
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="font-semibold text-gray-900">¿Cómo puedo rastrear mi pedido?</p>
+                      <p className="text-gray-600">Te enviaremos un email con el código de seguimiento.</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">¿Hacen envíos internacionales?</p>
+                      <p className="text-gray-600">Actualmente solo enviamos dentro de México.</p>
                     </div>
                   </div>
+
+                  {/* CTA para ver más preguntas */}
+                  <div className="mt-6 bg-white border border-green-200 rounded-lg p-4 text-center">
+                    <p className="text-gray-700 mb-2">
+                      ¿Tienes más dudas sobre envíos, pagos o devoluciones?
+                    </p>
+                    <a
+                      href="/faq"
+                      className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
+                    >
+                      Ver todas las preguntas frecuentes
+                    </a>
+                  </div>
+                </div>
 
                 </div>
               </div>

@@ -3,6 +3,34 @@ import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
 import { ShieldCheck, Truck, RotateCcw, Star, ShoppingCart, Heart } from 'lucide-react';
 import { useState } from 'react';
+import ReviewsSection from '../components/ReviewsSection';
+import SimuladorTalla from '../components/SimuladorTalla';
+import PreguntasProducto from '../components/PreguntasProducto';
+
+const preguntasMock = [
+  {
+    id: 1,
+    pregunta: '¿La sudadera es impermeable?',
+    respuesta: 'No es impermeable, pero tiene buena resistencia al viento y humedad ligera.',
+    usuario: 'María L.',
+    fecha: '2025-10-10',
+  },
+  {
+    id: 2,
+    pregunta: '¿Qué tan gruesa es la tela?',
+    respuesta: 'Es una tela térmica afelpada, ideal para clima frío sin ser demasiado pesada.',
+    usuario: 'Carlos T.',
+    fecha: '2025-10-12',
+  },
+  {
+    id: 3,
+    pregunta: '¿La talla M es ajustada o amplia?',
+    respuesta: 'Tiene corte Slim, por lo que es ligeramente ajustada al cuerpo.',
+    usuario: 'Ana G.',
+    fecha: '2025-10-15',
+  },
+];
+
 
 const productos = [
   {
@@ -13,7 +41,7 @@ const productos = [
     tipo: 'Outdoor',
     genero: 'Hombre',
     descripcion: 'Sudadera térmica ideal para actividades al aire libre. Material resistente, interior afelpado y diseño ergonómico.',
-    imagenes: ['/sudadera.jpg', '/sudadera2.jpg', '/sudadera3.jpg'],
+    imagenes: ['/sudadera.png', '/sudadera1.png', '/sudadera1.png'],
     tallas: ['S', 'M', 'L', 'XL'],
   },
 ];
@@ -23,24 +51,6 @@ const beneficios = [
   { icon: Truck, texto: 'Envío gratis a todo México' },
   { icon: RotateCcw, texto: 'Devoluciones fáciles hasta 30 días' },
   { icon: Star, texto: 'Producto con alta calificación por usuarios' },
-];
-
-const reseñas = [
-  {
-    usuario: 'Carlos M.',
-    comentario: 'Excelente calidad, la sudadera es muy cómoda y abriga bien.',
-    calificacion: 5,
-  },
-  {
-    usuario: 'Ana G.',
-    comentario: 'Me encantó el diseño y llegó muy rápido. Recomendado.',
-    calificacion: 4,
-  },
-  {
-    usuario: 'Luis R.',
-    comentario: 'Buena relación calidad-precio. Ideal para clima frío.',
-    calificacion: 5,
-  },
 ];
 
 const ProductoDetalle = () => {
@@ -101,6 +111,7 @@ const ProductoDetalle = () => {
               <img
                 key={index}
                 src={img}
+                lazy="loading"
                 alt={`Miniatura ${index + 1}`}
                 onClick={() => setImagenSeleccionada(img)}
                 className={`w-16 h-16 object-cover rounded cursor-pointer border ${img === imagenSeleccionada ? 'border-green-600' : 'border-transparent'} hover:scale-105 transition-transform duration-300`}
@@ -115,6 +126,7 @@ const ProductoDetalle = () => {
           >
             <img
               src={imagenSeleccionada}
+              lazy="loading"
               alt={producto.nombre}
               className={`w-full h-auto object-cover rounded shadow transition-transform duration-1000 ease-in-out ${zoomActivo ? 'scale-125' : 'scale-100'}`}
             />
@@ -200,30 +212,39 @@ const ProductoDetalle = () => {
         <p className="text-sm text-gray-700 leading-relaxed">{producto.descripcion}</p>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-8 py-6">
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">Reseñas de clientes</h2>
-        <div className="space-y-6">
-          {reseñas.map((r, index) => (
-            <div key={index} className="border border-gray-300 rounded-lg p-4 shadow-sm">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="text-sm font-semibold text-gray-800">{r.usuario}</h4>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} className={i < r.calificacion ? 'text-yellow-400' : 'text-gray-300'} />
-                  ))}
-                </div>
-              </div>
-              <p className="text-sm text-gray-700">{r.comentario}</p>
-            </div>
-          ))}
-        </div>
+      <ReviewsSection />
+      <SimuladorTalla />
+      
+      {/* Sección de preguntas del producto */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+        <PreguntasProducto preguntas={preguntasMock} />
       </section>
 
+      {/* Preguntas frecuentes generales */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+        <h2 className="text-xl font-semibold text-gray-800 mb-6">Preguntas frecuentes</h2>
+        <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <li><strong>¿Puedo cambiar la talla si no me queda?</strong> Sí, tienes hasta 30 días para solicitar un cambio.</li>
+          <li><strong>¿Los colores varían en persona?</strong> Puede haber ligeras variaciones por la iluminación de pantalla, pero son mínimas.</li>
+          <li><strong>¿Cómo sé si esta prenda es Slim o Regular?</strong> Revisa la descripción del producto o la guía de tallas.</li>
+        </ul>
+
+        {/* CTA para ir a FAQ */}
+        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+          <p className="text-gray-700 mb-2">
+            ¿Tienes más preguntas sobre este producto o nuestras políticas?
+          </p>
+          <a
+            href="/faq"
+            className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
+          >
+            Ir a la página de FAQ
+          </a>
+        </div>
+      </section>
       <Footer />
     </>
   );
 };
 
 export default ProductoDetalle;
-
-

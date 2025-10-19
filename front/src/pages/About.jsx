@@ -7,7 +7,10 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Header
+  navItems={['conócenos', 'misión', 'valores', 'equipo', 'reseñas', 'responsabilidad', 'contacto']}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80"
+/>
 
       <main className="w-full max-w-5xl mx-auto px-4 sm:px-8 py-12">
         <section id="conócenos" className="mb-12">

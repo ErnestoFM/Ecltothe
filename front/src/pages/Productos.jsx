@@ -3,38 +3,27 @@ import Footer from '../components/Footer';
 import { useState } from 'react';
 
 const productos = [
-  {
-    id: 1,
-    nombre: 'Camiseta deportiva',
-    precio: 299,
-    tipo: 'Deportiva',
-    talla: 'M',
-    genero: 'Hombre',
-    marca: 'Nike',
-    imagen: '/camiseta.jpg',
-  },
-  {
-    id: 2,
-    nombre: 'Leggings de yoga',
-    precio: 499,
-    tipo: 'Casual',
-    talla: 'S',
-    genero: 'Mujer',
-    marca: 'Adidas',
-    imagen: '/leggings.jpg',
-  },
-  {
-    id: 3,
-    nombre: 'Sudadera térmica',
-    precio: 399,
-    tipo: 'Outdoor',
-    talla: 'L',
-    genero: 'Hombre',
-    marca: 'Puma',
-    imagen: '/sudadera.jpg',
-  },
+  { id: 1, nombre: 'Camiseta deportiva', precio: 299, tipo: 'Deportiva', talla: 'M', genero: 'Hombre', marca: 'Nike', imagen: '/camisa.png' },
+  { id: 2, nombre: 'Leggings de yoga', precio: 499, tipo: 'Casual', talla: 'S', genero: 'Mujer', marca: 'Adidas', imagen: '/pans.png' },
+  { id: 3, nombre: 'Sudadera térmica', precio: 399, tipo: 'Outdoor', talla: 'L', genero: 'Hombre', marca: 'Puma', imagen: '/sudadera.png' },
+  { id: 4, nombre: 'Short de entrenamiento', precio: 249, tipo: 'Deportiva', talla: 'M', genero: 'Hombre', marca: 'Reebok', imagen: '/short.png' },
+  { id: 5, nombre: 'Top deportivo', precio: 349, tipo: 'Deportiva', talla: 'S', genero: 'Mujer', marca: 'Nike', imagen: '/top.png' },
+  { id: 6, nombre: 'Joggers casuales', precio: 599, tipo: 'Casual', talla: 'L', genero: 'Mujer', marca: 'Puma', imagen: '/joggers.png' },
+  { id: 7, nombre: 'Chamarra impermeable', precio: 799, tipo: 'Outdoor', talla: 'XL', genero: 'Hombre', marca: 'Columbia', imagen: '/chamarra.png' },
+  { id: 8, nombre: 'Tank top básico', precio: 199, tipo: 'Casual', talla: 'M', genero: 'Mujer', marca: 'Under Armour', imagen: '/tanktop.png' },
+  { id: 9, nombre: 'Pantalón térmico', precio: 449, tipo: 'Outdoor', talla: 'L', genero: 'Hombre', marca: 'North Face', imagen: '/pantalon.png' },
+  { id: 10, nombre: 'Sudadera oversize', precio: 549, tipo: 'Casual', talla: 'XL', genero: 'Mujer', marca: 'Zara', imagen: '/oversize.png' },
+  { id: 11, nombre: 'Camiseta sin mangas', precio: 229, tipo: 'Deportiva', talla: 'S', genero: 'Hombre', marca: 'Adidas', imagen: '/sinmangas.png' },
+  { id: 12, nombre: 'Leggings compresión', precio: 529, tipo: 'Deportiva', talla: 'M', genero: 'Mujer', marca: 'Nike', imagen: '/compression.png' },
+  { id: 13, nombre: 'Parka outdoor', precio: 899, tipo: 'Outdoor', talla: 'L', genero: 'Hombre', marca: 'Patagonia', imagen: '/parka.png' },
+  { id: 14, nombre: 'Crop top casual', precio: 299, tipo: 'Casual', talla: 'S', genero: 'Mujer', marca: 'Bershka', imagen: '/croptop.png' },
+  { id: 15, nombre: 'Pantalón jogger', precio: 479, tipo: 'Casual', talla: 'M', genero: 'Hombre', marca: 'H&M', imagen: '/joggerhombre.png' },
+  { id: 16, nombre: 'Chamarra ligera', precio: 699, tipo: 'Outdoor', talla: 'M', genero: 'Mujer', marca: 'Decathlon', imagen: '/ligera.png' },
+  { id: 17, nombre: 'Camiseta técnica', precio: 319, tipo: 'Deportiva', talla: 'L', genero: 'Hombre', marca: 'Under Armour', imagen: '/tecnica.png' },
+  { id: 18, nombre: 'Sudadera con capucha', precio: 599, tipo: 'Casual', talla: 'M', genero: 'Mujer', marca: 'Pull&Bear', imagen: '/capucha.png' },
+  { id: 19, nombre: 'Short outdoor', precio: 379, tipo: 'Outdoor', talla: 'M', genero: 'Hombre', marca: 'Quechua', imagen: '/shortoutdoor.png' },
+  { id: 20, nombre: 'Top de entrenamiento', precio: 329, tipo: 'Deportiva', talla: 'S', genero: 'Mujer', marca: 'Reebok', imagen: '/topentreno.png' },
 ];
-
 const Productos = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [showFilters, setShowFilters] = useState(false);

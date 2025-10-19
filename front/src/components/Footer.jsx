@@ -11,14 +11,12 @@ const Footer = () => {
   const customerService = [
     { name: 'Contacto', to: '/contacto' },
     { name: 'Envíos', to: '/envios' },
-    { name: 'Devoluciones', to: '/devoluciones' },
+    { name: 'Preguntas Frecuentes', to: '/faq' },
     { name: 'Guía de tallas', to: '/tallas' }
   ];
 
   const company = [
-    { name: 'Sobre nosotros', to: '/sobre-nosotros' },
-    { name: 'Sostenibilidad', to: '/sostenibilidad' },
-    { name: 'Carreras', to: '/carreras' },
+    { name: 'Sobre nosotros', to: '/nosotros' },
     { name: 'Blog', to: '/blog' }
   ];
 

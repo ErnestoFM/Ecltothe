@@ -29,7 +29,7 @@ const Navbar = () => {
     { name: 'Inicio', to: '/' },
     { name: 'Productos', to: '/productos' },
     { name: 'Blog', to: '/blog' },
-    { name: 'Contacto', to: '/contact' },
+    { name: 'Contacto', to: '/contacto' },
     { name: 'Nosotros', to: '/nosotros' }
   ];
 
