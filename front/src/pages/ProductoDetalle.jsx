@@ -65,17 +65,61 @@ const ProductoDetalle = () => {
   const [bounceCart, setBounceCart] = useState(false);
 
   if (!producto) {
-    return (
-      <>
-        <Navbar />
-        <section className="w-full max-w-4xl mx-auto px-4 py-12 text-center">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Producto no encontrado</h2>
-          <p className="text-sm text-gray-600">Verifica el ID o regresa a la página de productos.</p>
-        </section>
-        <Footer />
-      </>
-    );
-  }
+  return (
+    <>
+      <Navbar />
+      <section className="min-h-[60vh] w-full max-w-4xl mx-auto px-4 py-16 flex flex-col items-center justify-center">
+        <div className="text-center space-y-6">
+          {/* Icono de búsqueda */}
+          <div className="flex justify-center mb-4">
+            <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg 
+                className="w-12 h-12 text-gray-400" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+                />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Título y descripción */}
+          <div className="space-y-3">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Producto no encontrado
+            </h2>
+            <p className="text-base text-gray-600 max-w-md mx-auto">
+              Lo sentimos, no pudimos encontrar el producto que buscas. 
+              Puede que haya sido eliminado o el enlace sea incorrecto.
+            </p>
+          </div>
+          
+          {/* Botones de acción */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <button
+              onClick={() => window.history.back()}
+              className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors"
+            >
+              ← Volver atrás
+            </button>
+            <a
+              href="/productos"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              Ver todos los productos
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+}
 
   const activarZoom = () => {
     setTimeout(() => setZoomActivo(true), 3000);

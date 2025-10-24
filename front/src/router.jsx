@@ -17,7 +17,7 @@ import AdminPanel from './pages/priv/AdminPanel';
 import CrearProducto from './pages/priv/CrearProducto';
 import ModificarProducto from './pages/priv/ModificarProducto';
 import EliminarProducto from './pages/priv/EliminarProducto';
-
+import NotFound from './pages/NotFound';
 
 function Router() {
   return (
@@ -36,6 +36,9 @@ function Router() {
       <Route path="/productos" element={<Productos />} />
       <Route path="/pedidos" element={<Pedidos />} />
       <Route path="/producto/:id" element={<ProductoDetalle />} />
+
+      <Route path="*" element={<NotFound />} /> {/* Ruta para páginas no encontradas */}
+
 
       {/* Rutas Privadas*/}
       <Route path="/priv/panel" element={<AdminPanel />} />
