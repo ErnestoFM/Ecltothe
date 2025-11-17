@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import FaqItem from '../components/FaqItem';
 
 const faqData = {
   pedidos: [
@@ -36,15 +37,16 @@ const faqData = {
 const FaqPage = () => {
   const [busqueda, setBusqueda] = useState('');
   const categorias = Object.keys(faqData);
-    const normalizarTexto = (texto) => texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  
+  const normalizarTexto = (texto) => texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-    const filtrarPreguntas = (preguntas) =>
-        preguntas.filter(({ pregunta, respuesta }) => {
-            const query = normalizarTexto(busqueda);
-            return (
-            normalizarTexto(pregunta).includes(query) ||
-            normalizarTexto(respuesta).includes(query)
-            );
+  const filtrarPreguntas = (preguntas) =>
+    preguntas.filter(({ pregunta, respuesta }) => {
+      const query = normalizarTexto(busqueda);
+      return (
+        normalizarTexto(pregunta).includes(query) ||
+        normalizarTexto(respuesta).includes(query)
+      );
     });
 
   return (
@@ -81,12 +83,15 @@ const FaqPage = () => {
         {categorias.map((cat) => (
           <section key={cat} id={cat} className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 capitalize">{cat}</h2>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {filtrarPreguntas(faqData[cat]).map(({ pregunta, respuesta }, i) => (
-                <div key={i}>
-                  <h3 className="text-lg font-medium text-gray-900">{pregunta}</h3>
-                  <p className="text-gray-700">{respuesta}</p>
-                </div>
+                <FaqItem
+                  key={i}
+                  pregunta={pregunta}
+                  respuesta={respuesta}
+                  preguntaId={`pregunta-${cat}-${i}`}
+                  respuestaId={`respuesta-${cat}-${i}`}
+                />
               ))}
               {filtrarPreguntas(faqData[cat]).length === 0 && (
                 <p className="text-gray-500 italic">No hay preguntas que coincidan con tu búsqueda.</p>

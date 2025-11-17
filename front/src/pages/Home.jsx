@@ -12,12 +12,12 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   const products = [
-    { title: 'Camiseta Eclothe', image: '/img/camiseta.jpg', price: 299 },
-    { title: 'Sudadera Eco', image: '/img/sudadera.jpg', price: 499 },
-    { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
-    { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
-    { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
-    { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
+    { title: 'Camiseta Eclothe', image: '/pans_gris.png', price: 299 },
+    { title: 'Sudadera Eco', image: '/pans_gris.png', price: 499 },
+    { title: 'Short', image: '/pans_gris.png', price: 499 },
+    { title: 'Short', image: '/pans_gris.png', price: 499 },
+    { title: 'Short', image: '/pans_gris.png', price: 499 },
+    { title: 'Short', image: '/camisa1.png', price: 499 },
     { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
     { title: 'Short', image: '/img/sudadera.jpg', price: 499 },
     { title: 'Camiseta', image: '/img/sudadera.jpg', price: 499 }
