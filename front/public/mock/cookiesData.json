@@ -1,0 +1,130 @@
+{
+  "esenciales": {
+    "title": "Cookies Esenciales",
+    "icon": "Shield",
+    "description": "Estas cookies son necesarias para el funcionamiento básico del sitio web y no se pueden desactivar.",
+    "required": true,
+    "cookies": [
+      {
+        "name": "session_id",
+        "purpose": "Mantiene tu sesión activa mientras navegas",
+        "duration": "Sesión",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "cart_items",
+        "purpose": "Guarda los productos en tu carrito de compras",
+        "duration": "7 días",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "auth_token",
+        "purpose": "Recuerda que has iniciado sesión",
+        "duration": "30 días",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "csrf_token",
+        "purpose": "Protege contra ataques de seguridad",
+        "duration": "Sesión",
+        "provider": "Nuestro sitio"
+      }
+    ]
+  },
+  "funcionalidad": {
+    "title": "Cookies de Funcionalidad",
+    "icon": "Settings",
+    "description": "Estas cookies permiten recordar tus preferencias y personalizar tu experiencia.",
+    "required": false,
+    "cookies": [
+      {
+        "name": "user_language",
+        "purpose": "Recuerda tu idioma preferido",
+        "duration": "1 año",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "currency_preference",
+        "purpose": "Guarda tu moneda seleccionada (MXN, USD)",
+        "duration": "1 año",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "favorite_size",
+        "purpose": "Recuerda tu talla habitual",
+        "duration": "6 meses",
+        "provider": "Nuestro sitio"
+      },
+      {
+        "name": "theme_mode",
+        "purpose": "Recuerda si prefieres modo claro u oscuro",
+        "duration": "1 año",
+        "provider": "Nuestro sitio"
+      }
+    ]
+  },
+  "analiticas": {
+    "title": "Cookies Analíticas",
+    "icon": "BarChart3",
+    "description": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio.",
+    "required": false,
+    "cookies": [
+      {
+        "name": "_ga",
+        "purpose": "Registra un ID único para generar estadísticas",
+        "duration": "2 años",
+        "provider": "Google Analytics"
+      },
+      {
+        "name": "_gid",
+        "purpose": "Registra un ID único para estadísticas de uso",
+        "duration": "24 horas",
+        "provider": "Google Analytics"
+      },
+      {
+        "name": "_gat",
+        "purpose": "Limita la cantidad de solicitudes",
+        "duration": "1 minuto",
+        "provider": "Google Analytics"
+      },
+      {
+        "name": "hjid",
+        "purpose": "Genera mapas de calor y grabaciones de sesión",
+        "duration": "1 año",
+        "provider": "Hotjar"
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Cookies de Marketing",
+    "icon": "Megaphone",
+    "description": "Estas cookies se utilizan para mostrarte anuncios relevantes basados en tus intereses.",
+    "required": false,
+    "cookies": [
+      {
+        "name": "_fbp",
+        "purpose": "Seguimiento de conversiones de Facebook Ads",
+        "duration": "3 meses",
+        "provider": "Facebook"
+      },
+      {
+        "name": "fr",
+        "purpose": "Publicidad personalizada en Facebook",
+        "duration": "3 meses",
+        "provider": "Facebook"
+      },
+      {
+        "name": "IDE",
+        "purpose": "Remarketing y anuncios de Google",
+        "duration": "1 año",
+        "provider": "Google Ads"
+      },
+      {
+        "name": "_ttp",
+        "purpose": "Seguimiento de conversiones de TikTok",
+        "duration": "1 año",
+        "provider": "TikTok"
+      }
+    ]
+  }
+}
