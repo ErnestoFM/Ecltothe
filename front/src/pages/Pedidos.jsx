@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { getPedidos } from '../services/pedidos';
 import { useNavigate } from 'react-router-dom';
 
@@ -56,7 +54,6 @@ const Pedidos = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-grow container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Mis Pedidos</h1>
 
@@ -109,7 +106,6 @@ const Pedidos = () => {
         )}
         
       </main>
-      <Footer />
     </div>
   );
 };

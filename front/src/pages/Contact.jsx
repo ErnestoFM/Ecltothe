@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
 // Componente del formulario de contacto
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -174,7 +171,6 @@ const ContactForm = () => {
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       
       <main className="flex-grow bg-gray-50">
         {/* Hero Section */}
@@ -310,7 +306,6 @@ export default function Contact() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

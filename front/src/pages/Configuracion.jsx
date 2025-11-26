@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { useState } from 'react';
 import { PlusCircle, MapPin, CreditCard, User, Trash2 } from 'lucide-react';
 
@@ -56,8 +54,6 @@ const Configuracion = () => {
 
   return (
     <>
-      <Navbar />
-
       <section className="w-full max-w-4xl mx-auto bg-white py-8 px-4 sm:px-6">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Configuración de cuenta</h2>
 
@@ -142,7 +138,6 @@ const Configuracion = () => {
         </form>
       </section>
 
-      <Footer />
     </>
   );
 };

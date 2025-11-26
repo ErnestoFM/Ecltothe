@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Carrusel from '../components/Carrusel';
 import ErrorBoundary from '../components/ErrorBoundary';
 import BlogVisualizer from '../components/BlogVisualizer';
@@ -42,10 +40,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <ErrorBoundary>
-        <Navbar />
-      </ErrorBoundary>
-
       <main className="flex-grow bg-gray-50">
         <PublicidadSlider />
       </main>
@@ -73,7 +67,6 @@ export default function Home() {
       </main>
       
       <BlogVisualizer />
-      <Footer />
     </div>
   );
 }

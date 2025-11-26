@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Search, SlidersHorizontal, X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -87,14 +85,12 @@ const Productos = () => {
   if (loading) {
     return (
       <>
-        <Navbar />
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
           <div className="text-center">
             <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-600 mx-auto mb-4"></div>
             <p className="text-lg text-gray-600 font-medium">Cargando productos...</p>
           </div>
         </div>
-        <Footer />
       </>
     );
   }
@@ -102,7 +98,6 @@ const Productos = () => {
   if (error) {
     return (
       <>
-        <Navbar />
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-white to-orange-50 px-4">
           <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -118,14 +113,12 @@ const Productos = () => {
             </button>
           </div>
         </div>
-        <Footer />
       </>
     );
   }
 
   return (
     <>
-      <Navbar />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-12 px-4">
@@ -393,8 +386,6 @@ const Productos = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

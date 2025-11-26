@@ -1,11 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       
       <main className="flex-grow bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,8 +178,6 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

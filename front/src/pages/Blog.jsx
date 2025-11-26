@@ -1,6 +1,3 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
 import { useState } from 'react';
 import { Search } from 'lucide-react';
 
@@ -51,7 +48,6 @@ const Blog = () => {
 
   return (
     <>
-      <Navbar />
 
       <section className="w-full bg-white py-8 px-4 sm:px-12">
         {/* Filtros y buscador */}
@@ -136,7 +132,6 @@ const Blog = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };

@@ -140,6 +140,7 @@ const CookiesPolicy = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+
       {/* Banner de Cookies */}
       {showBanner && (
         <div className="fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t-4 border-blue-600 z-50 animate-slide-up">

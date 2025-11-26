@@ -1,14 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const NotFound = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center px-4 py-16">
         <div className="max-w-4xl w-full">
           {/* Contenedor principal */}
@@ -135,7 +132,6 @@ const NotFound = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

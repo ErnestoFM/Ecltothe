@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import ReviewsSection from '../components/ReviewsSection';
 import Header from '../components/Header';
 import SimuladorTalla from '../components/SimuladorTalla';
@@ -43,8 +41,6 @@ const calzado = {
 const GuiaTallas = () => {
   return (
     <>
-      <Navbar />
-
       <Header
   navItems={['inicio', 'medidas', 'marcas', 'simulador','resenas', 'dudas']}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80"
@@ -246,7 +242,6 @@ const GuiaTallas = () => {
   </div>
 </section>
       </main>
-      <Footer />
     </>
   );
 };

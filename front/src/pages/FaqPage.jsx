@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import FaqItem from '../components/FaqItem';
 
 const faqData = {
@@ -51,7 +49,6 @@ const FaqPage = () => {
 
   return (
     <>
-      <Navbar />
       <main className="max-w-5xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">❓ Preguntas Frecuentes</h1>
 
@@ -120,7 +117,6 @@ const FaqPage = () => {
           </form>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

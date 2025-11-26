@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
 import { ShieldCheck, Truck, RotateCcw, Star, ShoppingCart, Heart } from 'lucide-react';
 import { useState } from 'react';
@@ -67,7 +65,6 @@ const ProductoDetalle = () => {
   if (!producto) {
   return (
     <>
-      <Navbar />
       <section className="min-h-[60vh] w-full max-w-4xl mx-auto px-4 py-16 flex flex-col items-center justify-center">
         <div className="text-center space-y-6">
           {/* Icono de búsqueda */}
@@ -116,7 +113,6 @@ const ProductoDetalle = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
@@ -286,7 +282,6 @@ const ProductoDetalle = () => {
           </a>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

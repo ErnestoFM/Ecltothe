@@ -19,28 +19,33 @@ import ModificarProducto from './pages/priv/ModificarProducto';
 import EliminarProducto from './pages/priv/EliminarProducto';
 import NotFound from './pages/NotFound';
 import CookiesPolicy from './pages/CookiesPolicy';
+import Layout from './components/Layout';
 
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/contacto" element={<Contact />} />
-      <Route path="/nosotros" element={<About />} />
-      <Route path="/faq" element={<Faq />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/tallas" element={<Tallas />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="contacto" element={<Contact />} />
+        <Route path="nosotros" element={<About />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="tallas" element={<Tallas />} />
+        <Route path="/privacidad" element={<PrivacyPage />} />
+        <Route path="/terminos" element={<TermsPage />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/pedidos" element={<Pedidos />} />
+        <Route path="/producto/:id" element={<ProductoDetalle />} />
+        <Route path="/cookies" element={<CookiesPolicy />} />
+        <Route path="*" element={<NotFound />} /> {/* Ruta para páginas no encontradas */}
+      </Route>
       <Route path="/iniciarSesion" element={<IniciarSesion />} />
       <Route path="/crear-cuenta" element={<CrearCuenta />} />
       <Route path="/perfil" element={<Configuracion />} />
-      <Route path="/privacidad" element={<PrivacyPage />} />
-      <Route path="/terminos" element={<TermsPage />} />
-      <Route path="/productos" element={<Productos />} />
-      <Route path="/pedidos" element={<Pedidos />} />
-      <Route path="/producto/:id" element={<ProductoDetalle />} />
-      <Route path="/cookies" element={<CookiesPolicy />} />
+      
+      
 
 
-      <Route path="*" element={<NotFound />} /> {/* Ruta para páginas no encontradas */}
 
 
       {/* Rutas Privadas*/}
